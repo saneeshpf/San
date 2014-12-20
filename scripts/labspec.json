@@ -1,0 +1,77 @@
+{
+    "lab": {
+      "description": {
+            "id": "123",
+            "name": "Optics virtual lab",
+            "discipline": ["Relfection, refraction, and transmission"],
+            "status": "Active",
+            "type": "Optics",
+            "integration_level": 0,
+            "server-side": true,
+            "developer": [
+                {
+                    "contact": {
+                        "email": "vlaboptics@yahoo.co.in",
+                        "alternate_email": "",
+                        "mobile_number": "04841254684",
+                        "office_number": ""
+                    },
+                    "department": "Physics",
+                    "institute": "Amrita University",
+                    "name": "Amrita",
+                    "organization": "MHRD",
+                    "role": "Developer",
+                    "title": "Virtual Labs",
+                    "web": "vlab.co.in"
+                }
+            ]
+        },
+        "build_requirements": {
+            "platform": {
+                "arch": "i386",
+                "build_steps": {
+                    "build": ["make -C ../src"],
+                    "configure": [],
+                    "post_build": [],
+                    "pre_build": [],
+                    "status": []
+                },
+                "installer": [],
+                "os": "ubuntu",
+                "osVersion": "12",
+                "service_pack": ""
+            }
+        },
+        "runtime_requirements": {
+            "platform": {
+                "arch": "",
+                "hosting": "",
+                "installer": ["sudo apt-get update", "sudo apt-get install -y apache2""],
+                "lab_actions": {
+                    "backup": [],
+                    "clean": [],
+                    "init": ["mv /var/www/index.html index.html.default","cp -r ../src/* /var/www/"],
+                    "pause": [],
+                    "publish": [],
+                    "restore": ["restore"],
+                    "resume": [],
+                    "shutdown": [""],
+                    "start": [""],
+                    "stats": [],
+                    "stop": []
+                },
+                "memory": {
+                    "max_required": "",
+                    "min_required": ""
+                },
+                "os": "ubuntu",
+                "osVersion": "12",
+                "servicepack": "",
+                "storage": {
+                    "min_required": ""
+                }
+            }
+        }
+    },
+    "template": "1.0"
+}
